@@ -24,20 +24,29 @@ export const FilterBar = ({ items }: { items: { location: string; date: string; 
   const tags = useMemo(() => Array.from(new Set(items.flatMap(i => i.tags))).sort(), [items]);
 
   return (
-    <div className="sticky top-14 z-30 border-b bg-background/90 backdrop-blur">
-      <div className="container py-3 grid grid-cols-2 md:grid-cols-4 gap-2">
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search vlogs" className="rounded-md border bg-background px-3 py-2" />
-        <select value={location} onChange={(e) => setLocation(e.target.value)} className="rounded-md border bg-background px-3 py-2">
+    <div className="border-t border-b border-black/10 bg-white">
+      <div className="py-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+        <input 
+          value={q} 
+          onChange={(e) => setQ(e.target.value)} 
+          placeholder="Search films" 
+          className="border-none bg-transparent px-0 py-2 text-sm font-light focus:outline-none border-b border-black/20 focus:border-black transition-all placeholder:text-black/40" 
+        />
+        <select 
+          value={location} 
+          onChange={(e) => setLocation(e.target.value)} 
+          className="border-none bg-transparent px-0 py-2 text-sm font-light focus:outline-none border-b border-black/20 focus:border-black transition-all"
+        >
           <option value="">All locations</option>
           {locations.map(l => <option key={l} value={l}>{l}</option>)}
         </select>
-        <select value={year} onChange={(e) => setYear(e.target.value)} className="rounded-md border bg-background px-3 py-2">
+        <select 
+          value={year} 
+          onChange={(e) => setYear(e.target.value)} 
+          className="border-none bg-transparent px-0 py-2 text-sm font-light focus:outline-none border-b border-black/20 focus:border-black transition-all"
+        >
           <option value="">All years</option>
           {years.map(y => <option key={y} value={y}>{y}</option>)}
-        </select>
-        <select value={tag} onChange={(e) => setTag(e.target.value)} className="rounded-md border bg-background px-3 py-2">
-          <option value="">All tags</option>
-          {tags.map(t => <option key={t} value={t}>{t}</option>)}
         </select>
       </div>
     </div>

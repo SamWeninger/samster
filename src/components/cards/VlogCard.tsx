@@ -11,6 +11,9 @@ export type Vlog = {
   tags: string[];
   thumbnail: string;
   youtubeId: string;
+  description: string;
+  chapters: Array<{ t: string; label: string }>;
+  gallery: string[];
 };
 
 export const VlogCard = ({ vlog }: { vlog: Vlog }) => {

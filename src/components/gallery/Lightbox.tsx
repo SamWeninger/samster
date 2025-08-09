@@ -1,30 +1,93 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ResponsiveImage } from "@/components/media/ResponsiveImage";
 
-export const Lightbox = ({ images, index, onClose, onNavigate }: { images: string[]; index: number; onClose: () => void; onNavigate: (next: number) => void; }) => {
+type Props = {
+  images: string[];
+  index: number;
+  onClose: () => void;
+  onNavigate: (index: number) => void;
+};
+
+export const Lightbox = ({ images, index, onClose, onNavigate }: Props) => {
+  const [currentIndex, setCurrentIndex] = useState(index);
+
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowRight') onNavigate(index + 1);
-      if (e.key === 'ArrowLeft') onNavigate(index - 1);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [index, onClose, onNavigate]);
+    setCurrentIndex(index);
+  }, [index]);
 
-  let startX = 0;
-  const onTouchStart = (e: React.TouchEvent) => { startX = e.touches[0].clientX; };
-  const onTouchEnd = (e: React.TouchEvent) => {
-    const dx = e.changedTouches[0].clientX - startX;
-    if (dx > 40) onNavigate(index - 1);
-    if (dx < -40) onNavigate(index + 1);
+  const goToPrevious = () => {
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+    setCurrentIndex(newIndex);
+    onNavigate(newIndex);
   };
 
-  const safeIndex = ((index % images.length) + images.length) % images.length;
+  const goToNext = () => {
+    const newIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+    setCurrentIndex(newIndex);
+    onNavigate(newIndex);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") goToPrevious();
+      if (e.key === "ArrowRight") goToNext();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [currentIndex]);
 
   return (
-    <div role="dialog" aria-modal="true" className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-      <button aria-label="Close" onClick={onClose} className="absolute top-4 right-4 rounded-md bg-background/80 px-3 py-1">Close</button>
-      <img onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} src={images[safeIndex]} alt="Gallery image" className="max-h-[90vh] max-w-[90vw] object-contain" />
+    <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+      >
+        <X size={24} className="text-white" />
+      </button>
+
+      {/* Navigation buttons */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          >
+            <ChevronLeft size={24} className="text-white" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          >
+            <ChevronRight size={24} className="text-white" />
+          </button>
+        </>
+      )}
+
+      {/* Image */}
+      <div className="max-w-[90vw] max-h-[90vh] flex items-center justify-center">
+        <ResponsiveImage
+          src={images[currentIndex]}
+          alt={`Gallery image ${currentIndex + 1}`}
+          className="max-w-full max-h-full object-contain"
+        />
+      </div>
+
+      {/* Image counter */}
+      {images.length > 1 && (
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black/50 px-3 py-1 rounded-full text-sm">
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
+
+      {/* Background overlay for closing */}
+      <div
+        className="absolute inset-0 -z-10"
+        onClick={onClose}
+      />
     </div>
   );
 };
