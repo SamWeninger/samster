@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { TagPills } from "@/components/typography/TagPills";
 import { ResponsiveImage } from "@/components/media/ResponsiveImage";
+import { PlayCircle } from "lucide-react";
 
 export type Vlog = {
   slug: string;
@@ -15,20 +15,15 @@ export type Vlog = {
 
 export const VlogCard = ({ vlog }: { vlog: Vlog }) => {
   return (
-    <article className="group rounded-xl border bg-card text-card-foreground overflow-hidden hover:shadow-xl transition-shadow">
+    <article className="group rounded-2xl overflow-hidden">
       <Link to={`/vlogs/${vlog.slug}`} className="block">
         <div className="relative">
-          <ResponsiveImage src={vlog.thumbnail} alt={`${vlog.title} thumbnail`} className="w-full object-cover" />
-          <span className="absolute bottom-3 right-3 rounded-md bg-background/80 backdrop-blur px-2 py-1 text-xs">{vlog.duration}</span>
-        </div>
-        <div className="p-4 space-y-2">
-          <h3 className="font-semibold leading-tight">{vlog.title}</h3>
-          <p className="text-sm text-muted-foreground">{vlog.location}</p>
-          <TagPills tags={vlog.tags} />
-          <div className="pt-2">
-            <span className="inline-flex items-center rounded-md bg-primary px-3 py-1.5 text-sm text-primary-foreground group-hover:opacity-90 transition-opacity">
-              Watch
-            </span>
+          <ResponsiveImage src={vlog.thumbnail} alt={`${vlog.title} thumbnail`} className="w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+          <div className="absolute inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <PlayCircle size={56} className="text-background" />
+          </div>
+          <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-foreground/70 to-transparent">
+            <h3 className="font-heading text-lg md:text-xl text-background leading-tight">{vlog.title}</h3>
           </div>
         </div>
       </Link>

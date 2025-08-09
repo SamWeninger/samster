@@ -11,8 +11,8 @@ export const SiteHeader = () => {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="container flex h-14 items-center justify-between">
-        <Link to="/" className="font-extrabold tracking-tight text-lg">
-          Samsterishamster
+        <Link to="/" className="font-heading font-bold tracking-tight text-lg">
+          samster
         </Link>
         <nav className="flex items-center gap-1">
           <NavLink to="/vlogs" className={navClass}>
@@ -20,9 +20,6 @@ export const SiteHeader = () => {
           </NavLink>
           <NavLink to="/destinations" className={navClass}>
             Destinations
-          </NavLink>
-          <NavLink to="/about" className={navClass}>
-            About
           </NavLink>
         </nav>
         <div className="flex items-center gap-3">
