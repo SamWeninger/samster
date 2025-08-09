@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "tokyo-winter-2024",
+    "title": "Tokyo in 4K — Winter 2024",
+    "location": "Tokyo, Japan",
+    "date": "2024-12-28",
+    "duration": "17:29",
+    "tags": ["street food", "cityscapes", "winter"],
+    "thumbnail": "/images/tokyo/hero.jpg",
+    "youtubeId": "YOUTUBE_VIDEO_ID_TOKYO",
+    "description": "Walk the neon streets of Tokyo and taste late-night ramen in winter.",
+    "chapters": [
+      { "t": "0:00", "label": "Shibuya Crossing" },
+      { "t": "1:25", "label": "Street Food Alley" }
+    ],
+    "gallery": ["/images/tokyo/1.jpg", "/images/tokyo/2.jpg"]
+  },
+  {
+    "slug": "bali-sunset-2023",
+    "title": "Bali Sunsets & Clifftop Vibes",
+    "location": "Bali, Indonesia",
+    "date": "2023-08-14",
+    "duration": "12:06",
+    "tags": ["sunset", "ocean", "drone"],
+    "thumbnail": "/images/bali/hero.jpg",
+    "youtubeId": "YOUTUBE_VIDEO_ID_BALI",
+    "description": "Chasing golden hour on Bali's dramatic coastline.",
+    "chapters": [
+      { "t": "0:00", "label": "Uluwatu Cliffs" },
+      { "t": "5:02", "label": "Beach BBQ" }
+    ],
+    "gallery": ["/images/bali/1.jpg", "/images/bali/3.jpg"]
+  },
+  {
+    "slug": "iceland-aurora-2024",
+    "title": "Iceland Aurora Hunt",
+    "location": "Iceland",
+    "date": "2024-02-10",
+    "duration": "09:41",
+    "tags": ["northern lights", "landscapes", "winter"],
+    "thumbnail": "/images/iceland/hero.jpg",
+    "youtubeId": "YOUTUBE_VIDEO_ID_ICELAND",
+    "description": "Chasing the aurora across ice lagoons and volcanic beaches.",
+    "chapters": [
+      { "t": "0:00", "label": "Aurora Forecast" },
+      { "t": "3:45", "label": "Glacier Lagoon" }
+    ],
+    "gallery": ["/images/iceland/1.jpg", "/images/iceland/2.jpg"]
+  },
+  {
+    "slug": "tokyo-street-food-2024",
+    "title": "Tokyo Street Food Marathon",
+    "location": "Tokyo, Japan",
+    "date": "2024-12-27",
+    "duration": "15:10",
+    "tags": ["street food", "night market"],
+    "thumbnail": "/images/tokyo/1.jpg",
+    "youtubeId": "YOUTUBE_VIDEO_ID_TOKYO2",
+    "description": "From takoyaki to yakitori, a delicious night in Tokyo.",
+    "chapters": [],
+    "gallery": ["/images/tokyo/1.jpg", "/images/tokyo/3.jpg"]
+  },
+  {
+    "slug": "bali-waterfalls-2023",
+    "title": "Hidden Waterfalls of Bali",
+    "location": "Bali, Indonesia",
+    "date": "2023-06-02",
+    "duration": "08:37",
+    "tags": ["waterfalls", "jungle"],
+    "thumbnail": "/images/bali/2.jpg",
+    "youtubeId": "YOUTUBE_VIDEO_ID_BALI2",
+    "description": "Jungle hikes and ice-cold swims.",
+    "chapters": [],
+    "gallery": ["/images/bali/2.jpg"]
+  },
+  {
+    "slug": "iceland-ice-caves-2024",
+    "title": "Inside Iceland's Ice Caves",
+    "location": "Iceland",
+    "date": "2024-02-15",
+    "duration": "10:59",
+    "tags": ["ice caves", "adventure"],
+    "thumbnail": "/images/iceland/1.jpg",
+    "youtubeId": "YOUTUBE_VIDEO_ID_ICELAND2",
+    "description": "Exploring surreal blue ice tunnels.",
+    "chapters": [],
+    "gallery": ["/images/iceland/1.jpg", "/images/iceland/3.jpg"]
+  }
+]

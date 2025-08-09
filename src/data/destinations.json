@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "tokyo",
+    "name": "Tokyo, Japan",
+    "hero": "/images/tokyo/hero.jpg",
+    "summary": "Towers, alleyways, and late-night ramen.",
+    "gallery": ["/images/tokyo/1.jpg", "/images/tokyo/2.jpg", "/images/tokyo/3.jpg"],
+    "vlogs": ["tokyo-winter-2024", "tokyo-street-food-2024"]
+  },
+  {
+    "slug": "bali",
+    "name": "Bali, Indonesia",
+    "hero": "/images/bali/hero.jpg",
+    "summary": "Clifftop sunsets and jungle waterfalls.",
+    "gallery": ["/images/bali/1.jpg", "/images/bali/2.jpg", "/images/bali/3.jpg"],
+    "vlogs": ["bali-sunset-2023", "bali-waterfalls-2023"]
+  },
+  {
+    "slug": "iceland",
+    "name": "Iceland",
+    "hero": "/images/iceland/hero.jpg",
+    "summary": "Aurora nights and otherworldly landscapes.",
+    "gallery": ["/images/iceland/1.jpg", "/images/iceland/2.jpg", "/images/iceland/3.jpg"],
+    "vlogs": ["iceland-aurora-2024", "iceland-ice-caves-2024"]
+  }
+]
