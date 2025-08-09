@@ -7,6 +7,7 @@ import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { VlogCard } from "@/components/cards/VlogCard";
 import { ResponsiveImage } from "@/components/media/ResponsiveImage";
 import { ChevronLeft, PlayCircle } from "lucide-react";
+import { getGalleryImages } from "@/lib/utils";
 
 const DestinationDetail = () => {
   const { slug } = useParams();
@@ -92,7 +93,7 @@ const DestinationDetail = () => {
             </h2>
             <div className="w-16 h-px bg-black"></div>
           </div>
-          <GalleryGrid images={dest.gallery} altPrefix={dest.name} />
+          <GalleryGrid images={getGalleryImages(dest.galleryFolder, dest.galleryCount)} altPrefix={dest.name} />
         </div>
       </section>
 

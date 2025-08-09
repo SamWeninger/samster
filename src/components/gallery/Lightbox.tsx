@@ -68,12 +68,20 @@ export const Lightbox = ({ images, index, onClose, onNavigate }: Props) => {
       )}
 
       {/* Image */}
-      <div className="max-w-[90vw] max-h-[90vh] flex items-center justify-center">
-        <ResponsiveImage
-          src={images[currentIndex]}
-          alt={`Gallery image ${currentIndex + 1}`}
-          className="max-w-full max-h-full object-contain"
-        />
+      <div className="w-full h-full flex items-center justify-center p-8">
+        <div className="relative w-full h-full flex items-center justify-center">
+          <ResponsiveImage
+            src={images[currentIndex]}
+            alt={`Gallery image ${currentIndex + 1}`}
+            className="max-w-full max-h-full object-contain"
+            style={{
+              maxWidth: 'calc(100vw - 4rem)',
+              maxHeight: 'calc(100vh - 4rem)',
+              width: 'auto',
+              height: 'auto'
+            }}
+          />
+        </div>
       </div>
 
       {/* Image counter */}

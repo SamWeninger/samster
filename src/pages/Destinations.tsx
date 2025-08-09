@@ -4,6 +4,7 @@ import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { Link } from "react-router-dom";
 import { ResponsiveImage } from "@/components/media/ResponsiveImage";
 import { useEffect } from "react";
+import { getGalleryImages } from "@/lib/utils";
 
 const Destinations = () => {
   useEffect(() => {
@@ -60,17 +61,11 @@ const Destinations = () => {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
-                  {d.gallery.slice(0, 4).map((image, i) => (
-                    <div key={i} className="aspect-square overflow-hidden">
-                      <ResponsiveImage 
-                        src={image} 
-                        alt={`${d.name} ${i + 1}`} 
-                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
-                      />
-                    </div>
-                  ))}
-                </div>
+                                    <GalleryGrid 
+                      images={getGalleryImages(d.galleryFolder, d.galleryCount)} 
+                      altPrefix={d.name} 
+                      layout="preview" 
+                    />
               </article>
             ))}
           </div>

@@ -6,6 +6,7 @@ type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
 
 export const ResponsiveImage = ({ src = "", alt = "", srcSetSizes = [], className = "", ...rest }: Props) => {
   const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
   const buildSrcSet = () => {
     const base = src.replace(/\.(jpg|jpeg|png|webp)$/i, "");
@@ -14,6 +15,14 @@ export const ResponsiveImage = ({ src = "", alt = "", srcSetSizes = [], classNam
   };
 
   const srcSet = srcSetSizes.length ? buildSrcSet() : undefined;
+
+  if (error) {
+    return (
+      <div className={`bg-gray-200 flex items-center justify-center ${className}`}>
+        <span className="text-gray-500 text-sm">Image unavailable</span>
+      </div>
+    );
+  }
 
   return (
     <img
@@ -25,6 +34,7 @@ export const ResponsiveImage = ({ src = "", alt = "", srcSetSizes = [], classNam
       srcSet={srcSet}
       sizes={srcSet ? "(max-width: 768px) 100vw, 50vw" : undefined}
       onLoad={() => setLoaded(true)}
+      onError={() => setError(true)}
       {...rest}
     />
   );
