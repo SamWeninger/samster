@@ -25,5 +25,14 @@
     "galleryFolder": "/images/ulsanbawi/",
     "galleryCount": 8,
     "vlogs": ["korea-may-2024"]
+  },
+  {
+    "slug": "seattle",
+    "name": "Seattle, USA",
+    "hero": "/images/seattle/hero.jpg",
+    "summary": "Downtown Seattle, Maple Pass, and Mt. Rainier.",
+    "galleryFolder": "/images/seattle/",
+    "galleryCount": 8,
+    "vlogs": []
   }
 ]
