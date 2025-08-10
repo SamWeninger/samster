@@ -3,27 +3,27 @@
     "slug": "tokyo",
     "name": "Tokyo, Japan",
     "hero": "/images/tokyo/hero.jpg",
-    "summary": "Towers, alleyways, and late-night ramen.",
+    "summary": "Towers, alleyways, and natural beauty.",
     "galleryFolder": "/images/tokyo/",
+    "galleryCount": 8,
+    "vlogs": []
+  },
+  {
+    "slug": "seoul",
+    "name": "Seoul, South Korea",
+    "hero": "/images/seoul/hero.jpg",
+    "summary": "Skylines, street food, and diverse culture.",
+    "galleryFolder": "/images/seoul/",
     "galleryCount": 7,
-    "vlogs": ["tokyo-winter-2024", "tokyo-street-food-2024"]
+    "vlogs": ["korea-may-2024"]
   },
   {
-    "slug": "bali",
-    "name": "Bali, Indonesia",
-    "hero": "/images/bali/hero.jpg",
-    "summary": "Clifftop sunsets and jungle waterfalls.",
-    "galleryFolder": "/images/bali/",
-    "galleryCount": 3,
-    "vlogs": ["bali-sunset-2023", "bali-waterfalls-2023"]
-  },
-  {
-    "slug": "iceland",
-    "name": "Iceland",
-    "hero": "/images/iceland/hero.jpg",
-    "summary": "Aurora nights and otherworldly landscapes.",
-    "galleryFolder": "/images/iceland/",
-    "galleryCount": 3,
-    "vlogs": ["iceland-aurora-2024", "iceland-ice-caves-2024"]
+    "slug": "ulsanbawi",
+    "name": "Ulsanbawi, South Korea",
+    "hero": "/images/ulsanbawi/hero.jpg",
+    "summary": "Clifftops, stone peaks, and a trip to the DMZ.",
+    "galleryFolder": "/images/ulsanbawi/",
+    "galleryCount": 8,
+    "vlogs": ["korea-may-2024"]
   }
 ]

@@ -30,8 +30,8 @@ const Vlogs = () => {
             </h1>
             <div className="w-24 h-px bg-black mb-8"></div>
             <p className="text-lg text-black/60 font-light max-w-2xl">
-              Cinematic narratives that capture the essence of movement and place. 
-              Each film tells a story of discovery and wonder.
+              Films that capture the spirit of each place and journey.
+              I try to capture these places through my own eyes.
             </p>
           </div>
 

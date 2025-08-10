@@ -26,7 +26,7 @@ const Index = () => {
 
       <Hero
         title="SAMSTER"
-        subtitle="Capturing the world's hidden poetry through lens and motion"
+        subtitle="Exploring the world’s beauty through film and motion"
         image="/images/hero.jpg"
         cta={{ label: "Explore", href: "#philosophy" }}
       />
@@ -37,12 +37,12 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
               <h2 className="text-4xl md:text-6xl font-light tracking-[-0.02em] leading-tight">
-                Where time<br />
-                <em className="italic">stands still</em>
+                Step into<br />
+                <em className="italic">another world</em>
               </h2>
               <p className="text-lg text-black/60 font-light leading-relaxed max-w-xl">
-                Every destination tells a story. Through careful observation and patient waiting, 
-                I capture the essence of places that speak to the soul.
+                Every place is completely different, and I try to capture the new moments for me.
+                I'm not a professional photgrapher, video editor, or filmmaker. I just love to travel.
               </p>
             </div>
             <div className="relative">
