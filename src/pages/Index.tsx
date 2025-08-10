@@ -42,7 +42,7 @@ const Index = () => {
               </h2>
               <p className="text-lg text-black/60 font-light leading-relaxed max-w-xl">
                 Every place is completely different, and I try to capture the new moments for me.
-                I'm not a professional photgrapher, video editor, or filmmaker. I just love to travel.
+                I'm not a professional photgrapher, video editor, or filmmaker. I just like to travel.
               </p>
             </div>
             <div className="relative">
@@ -69,6 +69,7 @@ const Index = () => {
               <Link 
                 key={d.slug} 
                 to={`/destinations/${d.slug}`} 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
                 className="group relative overflow-hidden aspect-square bg-black"
               >
                 <ResponsiveImage 

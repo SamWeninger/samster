@@ -13,6 +13,8 @@ const DestinationDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHoveringTop, setIsHoveringTop] = useState(false);
   
   const dest = destinations.find(d => d.slug === slug);
   if (!dest) return <div className="container py-10">Not found</div>;
@@ -26,6 +28,27 @@ const DestinationDetail = () => {
     if (stored) {
       setScrollPosition(parseInt(stored));
     }
+
+    // Handle scroll detection
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    // Handle mouse movement for hover detection
+    const handleMouseMove = (e: MouseEvent) => {
+      // Check if mouse is in the area where the hover navigation would appear (below navbar)
+      const navbarHeight = 80; // height of main navbar
+      const hoverAreaHeight = 60; // height of hover navigation area
+      setIsHoveringTop(e.clientY >= navbarHeight && e.clientY <= navbarHeight + hoverAreaHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, [slug]);
 
   const handleBackClick = () => {
@@ -42,7 +65,7 @@ const DestinationDetail = () => {
         jsonLd={{"@context":"https://schema.org","@type":"Place", name: dest.name}} 
       />
       
-      {/* Back Navigation */}
+      {/* Back Navigation - Static */}
       <section className="px-8 py-6 border-b border-black/10">
         <div className="max-w-7xl mx-auto">
           <button
@@ -54,6 +77,27 @@ const DestinationDetail = () => {
           </button>
         </div>
       </section>
+
+      {/* Back Navigation - Hover-based */}
+      {isScrolled && (
+        <div 
+          className={`fixed top-20 left-0 right-0 z-40 transition-all duration-500 ${
+            isHoveringTop ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+          }`}
+        >
+          <div className="bg-white/95 backdrop-blur-xl border-b border-black/10 px-8 py-4">
+            <div className="max-w-7xl mx-auto">
+              <button
+                onClick={handleBackClick}
+                className="flex items-center gap-3 text-black/60 hover:text-black transition-colors group"
+              >
+                <ChevronLeft size={20} className="transition-transform group-hover:-translate-x-1" />
+                <span className="text-sm tracking-wide font-light">BACK TO DESTINATIONS</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="px-8 py-20">
