@@ -10,5 +10,17 @@
     "youtubeId": "BGQ4sthYfoQ",
     "description": "A journey through Seoul's vibrant streets, the dramatic east coast, and the historic Korean border. From urban exploration to coastal serenity.",
     "chapters": []
+  },
+  {
+    "slug": "tokyo-winter-2024",
+    "title": "Tokyo — Winter 2024",
+    "location": "Japan",
+    "date": "2024-12-10",
+    "duration": "17:30",
+    "tags": [],
+    "thumbnail": "/images/videos/tokyo-winter-2024.jpg",
+    "youtubeId": "sL4FPyC8kA8",
+    "description": "A winter in Tokyo, weaving though busy Shibuya, Shinjuku, and the quiet streets of Harajuku, along with peaceful escapes like Yoyogi Park and Shinjuku Gyoen.",
+    "chapters": []
   }
 ]
