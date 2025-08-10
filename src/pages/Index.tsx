@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <main className="bg-white">
       <SEO
-        title="Samster"
+        title="samster"
         description="Latest cinematic travel vlog and galleries. Tokyo, Bali, Iceland and more."
         canonical="/"
         jsonLd={{

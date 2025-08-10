@@ -20,7 +20,7 @@ const Vlogs = () => {
 
   return (
     <main className="pt-20 bg-white">
-      <SEO title="Samster" description="Browse cinematic travel films by location, year and tags." canonical="/vlogs" />
+      <SEO title="samster" description="Browse cinematic travel films by location, year and tags." canonical="/vlogs" />
       
       <section className="py-20 px-8">
         <div className="max-w-7xl mx-auto">

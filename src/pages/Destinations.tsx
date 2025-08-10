@@ -13,7 +13,7 @@ const Destinations = () => {
   }, []);
   return (
     <main className="pt-20 bg-white">
-      <SEO title="Samster" description="Explore travel photo galleries by destination." canonical="/destinations" />
+      <SEO title="samster" description="Explore travel photo galleries by destination." canonical="/destinations" />
       
       <section className="py-20 px-8">
         <div className="max-w-7xl mx-auto">

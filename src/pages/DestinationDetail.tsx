@@ -59,7 +59,7 @@ const DestinationDetail = () => {
   return (
     <main className="pt-20 bg-white">
       <SEO 
-        title="Samster" 
+        title="samster" 
         description={dest.summary} 
         canonical={`/destinations/${dest.slug}`} 
         jsonLd={{"@context":"https://schema.org","@type":"Place", name: dest.name}} 

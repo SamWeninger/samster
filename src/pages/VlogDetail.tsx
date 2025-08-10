@@ -31,7 +31,7 @@ const VlogDetail = () => {
 
   return (
     <main className="pt-20 bg-white">
-      <SEO title="Samster" description={vlog.description} canonical={`/vlogs/${vlog.slug}`} jsonLd={jsonLd} />
+      <SEO title="samster" description={vlog.description} canonical={`/vlogs/${vlog.slug}`} jsonLd={jsonLd} />
       
       {/* Back Navigation */}
       <section className="px-8 py-6 border-b border-black/10">
