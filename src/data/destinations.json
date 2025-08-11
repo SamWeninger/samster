@@ -27,6 +27,15 @@
     "vlogs": ["korea-may-2024"]
   },
   {
+    "slug": "yosemite",
+    "name": "Yosemite, USA",
+    "hero": "/images/yosemite/hero.jpg",
+    "summary": "Yosemite National Park, El Capitan, and rainbows.",
+    "galleryFolder": "/images/yosemite/",
+    "galleryCount": 6,
+    "vlogs": []
+  },
+  {
     "slug": "seattle",
     "name": "Seattle, USA",
     "hero": "/images/seattle/hero.jpg",
@@ -42,6 +51,15 @@
     "summary": "Downtown Toronto, highlighting St. George Campus and Queen's Park, along with other buroughs and neighborhoods.",
     "galleryFolder": "/images/toronto/",
     "galleryCount": 9,
+    "vlogs": []
+  },
+  {
+    "slug": "san-diego",
+    "name": "San Diego, USA",
+    "hero": "/images/san-diego/hero.jpg",
+    "summary": "San Diego, and the surrounding areas.",
+    "galleryFolder": "/images/san-diego/",
+    "galleryCount": 6,
     "vlogs": []
   }
 ]
