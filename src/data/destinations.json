@@ -34,5 +34,14 @@
     "galleryFolder": "/images/seattle/",
     "galleryCount": 8,
     "vlogs": []
+  },
+  {
+    "slug": "toronto",
+    "name": "Toronto, Canada",
+    "hero": "/images/toronto/hero.jpg",
+    "summary": "Downtown Toronto, highlighting St. George Campus and Queen's Park, along with other buroughs and neighborhoods.",
+    "galleryFolder": "/images/toronto/",
+    "galleryCount": 9,
+    "vlogs": []
   }
 ]
